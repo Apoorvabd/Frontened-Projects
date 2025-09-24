@@ -44,11 +44,3 @@ This project is perfect for learning **front-end development**, UI design, and r
 
 ---
 
-## 📂 Project Structure
-
-```text
-amazon-clone/
-├── index.html       ← Main HTML file
-├── style.css        ← CSS for styling
-├── images/          ← Folder containing images used in the project
-└── README.md        ← Project documentation
