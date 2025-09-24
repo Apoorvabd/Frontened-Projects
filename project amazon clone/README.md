@@ -23,14 +23,15 @@ This project is perfect for learning **front-end development**, UI design, and r
 
 ## 🖼️ Preview
 
-![Amazon Clone Preview](https://via.placeholder.com/1000x500?text=Amazon+Clone+Preview)
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/be2585e9-bc66-4b79-afcc-b37526b191c6" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/646d8273-3e03-40ad-afb6-def27cb07589" />
+
+
 
 ---
 
-## 🚀 Live Demo
 
-You can view the live demo here:  
-🔗 [Live Demo Link](#) *(replace `#` with actual live link if hosted)*
 
 ---
 
