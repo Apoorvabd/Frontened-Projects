@@ -40,7 +40,7 @@ This project is perfect for learning **front-end development**, UI design, and r
 - **HTML5** – Structure of the web page  
 - **CSS3** – Styling and responsive design  
 - **Font Awesome** – Icons for cart, search, location, etc.  
-- **JavaScript** *(Optional)* – Can be added for interactive elements  
+  
 
 ---
 
