@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Example</title>
+</head>
+<body>
+  <h2>Simple Quiz</h2>
+  
+  <form id="quizForm">
+    <ol>
+      <li>
+        <p> Capital of India?</p>
+        <label><input type="radio" name="q1" value="1"> Delhi</label><br>
+        <label><input type="radio" name="q1" value="2"> Mumbai</label><br>
+        <label><input type="radio" name="q1" value="3"> Bhopal</label><br>
+        <label><input type="radio" name="q1" value="4"> Kolkata</label>
+      </li>
+
+      <li>
+        <p> National Animal of India?</p>
+        <label><input type="radio" name="q2" value="1"> Elephant</label><br>
+        <label><input type="radio" name="q2" value="2"> Tiger</label><br>
+        <label><input type="radio" name="q2" value="3"> Lion</label><br>
+        <label><input type="radio" name="q2" value="4"> Peacock</label>
+      </li>
+
+      <li>
+        <p> National Bird of India?</p>
+        <label><input type="radio" name="q3" value="1"> Crow</label><br>
+        <label><input type="radio" name="q3" value="2"> Sparrow</label><br>
+        <label><input type="radio" name="q3" value="3"> Peacock</label><br>
+        <label><input type="radio" name="q3" value="4"> Parrot</label>
+      </li>
+
+      <li>
+        <p> National Flower of India?</p>
+        <label><input type="radio" name="q4" value="1"> Lotus</label><br>
+        <label><input type="radio" name="q4" value="2"> Rose</label><br>
+        <label><input type="radio" name="q4" value="3"> Sunflower</label><br>
+        <label><input type="radio" name="q4" value="4"> Jasmine</label>
+      </li>
+
+      <li>
+        <p>5. National Currency of India?</p>
+        <label><input type="radio" name="q5" value="1"> Dollar</label><br>
+        <label><input type="radio" name="q5" value="2"> Yen</label><br>
+        <label><input type="radio" name="q5" value="3"> Rupee</label><br>
+        <label><input type="radio" name="q5" value="4"> Pound</label>
+      </li>
+    </ol>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <!-- <script>
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // form submit hone se page reload na ho
+
+      let score = 0;
+
+      // Correct answers (value ke hisaab se)
+      const correctAnswers = {
+        q1: "1", // Delhi
+        q2: "2", // Tiger
+        q3: "3", // Peacock
+        q4: "1", // Lotus
+        q5: "3"  // Rupee
+      };
+
+      // Loop through answers
+      for (let q in correctAnswers) {
+        let selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === correctAnswers[q]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").textContent = "Your Score: " + score + "/5";
+    });
+  </script> -->
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      let answers={
+        q1:"1",
+        q2:"2",
+        q3:"3",
+        q4:"2",
+        q5:"3"
+      };
+      let score=0;
+      for(let q in answers){
+        let uans=document.querySelector(`input[name=${q}]:checked`);
+        if (uans && uans.value === answers[q]) {
+          score++;
+        }
+      }
+       document.getElementById("result").textContent = "Your Score: " + score + "/5"
+    })
+  </script>
+</body>
+</html>

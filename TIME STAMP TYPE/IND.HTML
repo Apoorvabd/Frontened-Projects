@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        #datetimeInput{
+            font-size: 30px;
+            position: absolute;
+            top: 50px;
+        }
+        #but{
+            font-size: 30px;
+            position: absolute;
+            top: 120px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .timer {
+            display: flex;
+            gap: 20px;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .time-section {
+            text-align: center;
+        }
+        .time-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .time-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body >
+    <input type="datetime-local" id="datetimeInput">
+    <button  id="but">Start Timer</button>
+    <div class="timer">
+        <div class="time-section">
+            <div class="time-value" id="days">00</div>
+            <div class="time-label">Days</div>
+        </div>
+        <div class="time-section">
+            <div class="time-value" id="hours">00</div>
+            <div class="time-label">Hours</div>
+        </div>
+        <div class="time-section">
+            <div class="time-value" id="minutes">00</div>
+            <div class="time-label">Minutes</div>
+        </div>
+        <div class="time-section">
+            <div class="time-value" id="seconds">00</div>
+            <div class="time-label">Seconds</div>
+        </div>
+    </div>
+</body>
+<script>
+    let cdt;
+    function clock(abc){
+        let a=new Date(abc);
+        let b=new Date();
+        let diff=a-b;
+        document.getElementById('days').innerHTML=Math.floor(diff/(1000*60*60*24));
+        document.getElementById('hours').innerHTML=Math.floor(diff%(1000*60*60*24)/(60*60*1000));
+        document.getElementById('minutes').innerHTML=Math.floor(diff/(1000*60)%60);
+        document.getElementById('seconds').innerHTML=Math.floor((diff % (1000*60)) / 1000);
+    }
+    
+    document.getElementById('but').addEventListener('click',()=>{
+        clearInterval(cdt);
+        abc=document.getElementById('datetimeInput').value;
+        
+        cdt=setInterval(()=>clock(abc),1000);
+        clock(abc);
+    });
+        
+</script>
+</html>

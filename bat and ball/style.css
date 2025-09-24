@@ -1,0 +1,137 @@
+*{
+    background-color:white;
+
+}
+.ground{
+    background-color: green;
+    position: relative;
+    left: 600px;
+    width: 800px;
+    height: 800px;
+    border: 2px solid white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.total{
+    background-color: green;
+    height: 754px;
+    width: 140px;
+    position: relative;
+    left: 42%;
+    top: 40px;
+    margin-bottom: 100px;
+}
+.ball{
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    position: absolute;
+    top:50px;
+    border-radius: 50%;
+    animation-name: throw;
+    animation:throw 3s  linear 0S INFINITE NORMAL;
+    z-index: 5;
+   
+}
+@keyframes  throw{
+    0%{left: 900px;top: 680px;}
+    20%{left: 915px; top: 550px;}
+    40%{left: 930px; top: 450px;}
+    60%{left: 945px; top: 340px;}
+    80%{left: 960px; top: 210px;}
+    100%{left: 960px; top: 110px;}
+     
+    
+  }
+
+.pitch {
+    top: 50px;
+    position: relative;
+    width: 140px;
+    height: 500px;
+    background: rgb(180, 150, 86);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+  }
+
+  .WICKET1{
+    top: 50px;
+    margin-bottom: 1px;
+    position: relative;
+    height: 45px;
+    width: 140px;
+    background: rgba(180, 150, 86);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+         
+  }
+  
+  .wicket2{
+    top: 50px;
+    margin-top: 1px;
+    padding-top: 11px;
+    position: relative;
+    height: 45px;
+    width: 140px;
+    background: rgba(180, 150, 86);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+         
+  }
+
+.stumpall {
+    position: absolute;
+    top: 10px;
+    left: 34px;
+  width: 65px;
+  height: 80px;
+  background-image: linear-gradient(green 32%  68%, green 32%);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 1;
+  
+  }
+  #a1 {
+  animation: wicketdown 3s linear infinite;
+  animation-delay: 0s; /* ball hit ke baad gire */
+  transform-origin: bottom center;
+}
+
+@keyframes wicketdown {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(0deg); }
+  97%  { transform: rotate(0deg); }
+  100% { transform: rotate(80deg); }
+}
+.stumpall2 {
+    background-color: green;
+    position: absolute;
+    top: 599px;
+    left: 34px;
+  width: 65px;
+  height: 80px;
+background-image: linear-gradient(rgba(180, 150, 86)  68%, green 32%); 
+ border-radius: 3px;
+  display: flex;
+  justify-content: space-evenly;
+  color: green;
+  
+}
+  
+ 
+  
+  .stump {
+    border: 2px solid green;
+    position:relative;
+  width: 6px;
+  height: 80px;
+  background-color: #c13b0a; 
+  border-radius: 3px;
+  opacity: 1;
+  z-index: 4;
+  opacity: 1;
+  border-radius: 8px;
+}
